@@ -1,0 +1,17 @@
+{application, erlmachine_json,
+ [
+  {description, "Erlmachine extensions to encode/decode json objects"},
+  {vsn, "1.0.0"},
+  {modules, []},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  erlmachine,
+                  jsx
+                 ]},
+  {env, []},
+
+  {licenses, ["apache-2.0"]},
+  {links, [{"Github", "https://github.com/Erlmachine/erlmachine_json"}]}
+ ]}.
