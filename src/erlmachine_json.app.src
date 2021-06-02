@@ -1,6 +1,6 @@
 {application, erlmachine_json,
  [
-  {description, "Erlmachine extensions to encode/decode json objects"},
+  {description, "Erlmachine extensions to encode/decode json data objects"},
   {vsn, "1.0.0"},
   {modules, []},
   {registered, []},

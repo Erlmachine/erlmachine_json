@@ -1,5 +1,5 @@
 PROJECT = erlmachine_json
-PROJECT_DESCRIPTION = Erlmachine extensions to encode/decode json objects
+PROJECT_DESCRIPTION = Erlmachine extensions to encode/decode json data objects
 PROJECT_VERSION = 1.0.0
 
 DEPS = erlmachine jsx
