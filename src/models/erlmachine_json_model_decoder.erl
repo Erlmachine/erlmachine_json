@@ -1,4 +1,4 @@
--module(erlmachine_json_model_encode).
+-module(erlmachine_json_model_decoder).
 
 -behaviour(erlmachine_worker_model).
 
@@ -24,10 +24,11 @@ startup(_UID, State, _Opt, _Env) ->
 process(_UID, Motion, State) ->
     Document = erlmachine:body(Motion),
 
-    try
-        Result = erlmachine_json:encode(Document),
+    try Document of
+        _ when is_binary(Document) ->
+            Result = erlmachine_json:decode(Document),
 
-        erlmachine:success(erlmachine:body(Motion, Result), State)
+            erlmachine:success(erlmachine:body(Motion, Result), State)
     catch E:R ->
             erlmachine:failure(E, R, State)
     end.
